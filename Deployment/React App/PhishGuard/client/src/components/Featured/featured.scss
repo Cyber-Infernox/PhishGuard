@@ -1,0 +1,162 @@
+.featured {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+
+  .container {
+    display: flex;
+
+    .left {
+      padding: 0 40px;
+      width: 640px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      h1 {
+        font-size: 48px;
+        line-height: 56px;
+
+        span {
+          font-family: "Noto Serif Display", serif;
+          font-weight: 600;
+        }
+
+        @media screen and (max-width: 900px) {
+          font-size: 45px;
+        }
+
+        @media screen and (max-width: 600px) {
+          font-size: 32px;
+        }
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 5px;
+
+        .searchInput {
+          background-color: #fff;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          img {
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+          }
+
+          input {
+            width: 100%;
+            height: 48px;
+            border: none;
+            outline: none;
+          }
+
+          @media screen and (max-width: 900px) {
+            border-radius: 5px;
+          }
+
+          .searchIcon {
+            margin-left: 16px;
+          }
+        }
+
+        button {
+          width: 200px;
+          height: 48px;
+          font-size: 16px;
+          border: none;
+          background-color: #474747;
+          color: #fff;
+          cursor: pointer;
+          border-radius: 0 5px 5px 0;
+          transition: all 0.3s ease-out;
+          -webkit-transition: all 0.3s ease-out;
+
+          @media screen and (max-width: 900px) {
+            width: 100%;
+            border-radius: 5px;
+          }
+        }
+
+        button:hover {
+          background-color: #072f69;
+        }
+
+        @media screen and (max-width: 900px) {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+
+      .popular {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        button {
+          color: #fff;
+          background-color: transparent;
+          border: 1px solid #fff;
+          padding: 5px 10px;
+          border-radius: 20px;
+          font-size: 14px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #fff;
+            color: #000;
+          }
+        }
+        .resultBox {
+          background-color: #000;
+          border: 1px solid #ccc;
+          padding: 20px;
+          border-radius: 5px;
+          margin-top: 20px;
+
+          p {
+            margin: 0;
+          }
+        }
+
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        top: 100px;
+        width: 80%;
+        margin: auto;
+      }
+    }
+
+    .right {
+      img {
+        width: 100%;
+        height: 89.5%;
+        position: absolute;
+        z-index: -1;
+        top: 80px;
+        right: 0;
+
+        @media screen and (max-width: 900px) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    background-color: #1a1b1d;
+    height: 400px;
+    justify-content: center;
+  }
+}

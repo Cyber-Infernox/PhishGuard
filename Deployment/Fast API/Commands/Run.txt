@@ -1,0 +1,3 @@
+cd "C:\Users\sayon\Documents\GitHub\ML Projects\PhishGuard\Deployment\Fast API\code"
+
+uvicorn ml_api:app

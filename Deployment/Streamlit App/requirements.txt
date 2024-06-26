@@ -1,0 +1,12 @@
+numpy==1.26.4
+pymongo==4.6.3
+python-dotenv==1.0.1
+Requests==2.31.0
+streamlit==1.33.0
+streamlit_option_menu==0.3.12
+tld==0.13
+tldextract==5.1.2
+whois==1.20240129.2
+googlesearch-python==1.2.3
+scikit-learn==1.2.2
+pickle-mixin==1.0.2

@@ -1,0 +1,1 @@
+streamlit run "C:\Users\sayon\Documents\GitHub\ML Projects\PhishGuard\Deployment\Streamlit App\app.py"
