@@ -11,7 +11,7 @@ const app = express();
 // middleware
 app.use(
   cors({
-    origin: "https://phish-guard.vercel.app", // Replace with your client app's origin
+    origin: "https://phish-guard.vercel.app", // Client app's origin
   })
 );
 app.use(express.json()); // For POST and PATCH requests
