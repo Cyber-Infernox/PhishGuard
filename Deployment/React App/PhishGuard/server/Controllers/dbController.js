@@ -1,5 +1,4 @@
 require("dotenv").config();
-const mongoose = require("mongoose");
 const { MongoClient } = require("mongodb");
 
 const Report = require("../Models/dbReport");
@@ -31,22 +30,22 @@ const datasetURL = async (req, res) => {
 
 // Get URL type
 const typeURL = async (req, res) => {
-  const url = req.body.url; // You need to specify the property 'url'
+  const url = req.body.url;
 
   const client = new MongoClient(process.env.MONGO_URI);
 
   try {
-    await client.connect(); // Connect to the MongoDB client
-    const db = client.db(process.env.MONGO_PREDICT_DB); // Get the database
-    const collection = db.collection(process.env.MONGO_PREDICT_COLLECTION); // Get the collection
+    await client.connect();
+    const db = client.db(process.env.MONGO_PREDICT_DB);
+    const collection = db.collection(process.env.MONGO_PREDICT_COLLECTION);
 
-    const result = await collection.findOne({ url: url }); // Find a document with the specified URL
-    res.status(200).json(result ? result.type : null); // Return the type or null if not found
+    const result = await collection.findOne({ url: url });
+    res.status(200).json(result ? result.type : null);
   } catch (err) {
-    console.error(err); // Log errors to the console
-    res.status(500).json({ error: "Internal Server Error" }); // Send a server error response
+    console.error(err);
+    res.status(500).json({ error: "Internal Server Error" });
   } finally {
-    await client.close(); // Ensure client is closed
+    await client.close();
   }
 };
 
