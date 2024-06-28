@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import "./featured.scss";
 
-import getURLTypeAPI from "../../api/getURLTypeAPI";
 import getModelResultAPI from "../../api/getModelResultAPI";
 // import datasetAPI from "../../api/datasetAPI";
 

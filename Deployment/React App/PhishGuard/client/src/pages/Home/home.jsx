@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Featured from "../../components/Featured/featured";
-// import axios from "axios";
 
 import "./home.scss";
 
