@@ -23,7 +23,7 @@ Phishing attacks are on the rise, posing significant threats to personal and org
 - **Phishing URL Detection**: Our advanced machine learning algorithms analyze URLs in real-time to detect potential phishing threats.
 - **User Reporting**: Users can report new phishing URLs, contributing to the community-driven database.
 - **Real-Time Database Updates**: The database of phishing URLs is updated in real-time based on user reports and continuous monitoring.
-- **Browser Extension**: A handy browser extension for quick and easy URL checks.
+- **Google Chrome Browser Extension**: A handy browser extension for quick and easy URL checks.
 
 ## Tech Stack
 
@@ -38,9 +38,8 @@ PhishGuard leverages a powerful tech stack to deliver its features:
 
 ## Screenshots
 
-![Home Page](link-to-screenshot1)
-![Dashboard](link-to-screenshot2)
-![Browser Extension](link-to-screenshot3)
+![Home Page](Screenshots/Extension.png)
+![Google Chrome Browser Extension](link-to-screenshot3)
 
 ## Contributing
 
