@@ -3,7 +3,8 @@ import axios from "axios";
 const getURLTypeAPI = async (url) => {
   try {
     const response = await axios.post(
-      "https://phish-server.onrender.com/api/db/type/",
+      // "https://phish-server.onrender.com/api/db/type/",
+      `${process.env.REACT_APP_SERVER_URL}api/db/type/`,
       {
         url,
       }
