@@ -720,6 +720,8 @@ def get_prediction_from_url(test_url):
     
     #if(analyze_content(test_url) == 0):
         #return "PHISHING"
+        
+    test_url = get_main_website_url(test_url)
     
     features_test = mainly(test_url)
 
@@ -733,7 +735,7 @@ def get_prediction_from_url(test_url):
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
-load_dotenv("C:/Users/sayon/Downloads/ML Projects/Malicious URL Detection/hosting/Jojo-URL-Detection/deployment/.env")
+load_dotenv("C:/Users/sayon/Documents/GitHub/ML Projects/PhishGuard/Deployment/Streamlit App/.env")
 #load_dotenv(".env")
 
 # Connect to MongoDB
@@ -772,7 +774,7 @@ class model_input(BaseModel):
     url : str
 
 # loading the saved model
-loaded_model = pickle.load(open('C:/Users/sayon/Downloads/ML Projects/Malicious URL Detection/hosting/Jojo-URL-Detection/model/one.sav','rb'))
+loaded_model = pickle.load(open('C:/Users/sayon/Documents/GitHub/ML Projects/PhishGuard/Model/dataset.sav','rb'))
 #loaded_model = pickle.load(open('trained_model.sav','rb'))
 
 def get_main_website_url(long_url):
@@ -791,8 +793,6 @@ def url_pred(input_parameters : model_input):
     
     url = input_dictionary['url']
     
-    url = get_main_website_url(url)
-    
     input_list = [url]
     
     url_type = check_url_type(url)
@@ -802,10 +802,10 @@ def url_pred(input_parameters : model_input):
         prediction = get_prediction_from_url(url)
         
         if prediction[0] == 0:
-            diagnosis = "SAFE"
+            diagnosis = "benign"
 
         elif prediction[0] == 1:
-            diagnosis = "PHISHING"
+            diagnosis = "phishing"
         
         # Add URL and its type to the database
         if add_url_to_database(url, diagnosis):

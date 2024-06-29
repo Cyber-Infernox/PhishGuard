@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import "./featured.scss";
 
 import getModelResultAPI from "../../api/getModelResultAPI";
-// import datasetAPI from "../../api/datasetAPI";
 
 const Featured = () => {
   const [search, setSearch] = useState("");
@@ -18,14 +17,6 @@ const Featured = () => {
       return false;
     }
 
-    // // Check for "http://www." or "https://www." at the beginning and remove "www."
-    // if (url.startsWith("http://www.")) {
-    //   url = "http://" + url.substring(11); // Keep "http://" and remove "www."
-    // } else if (url.startsWith("https://www.")) {
-    //   url = "https://" + url.substring(12); // Keep "https://" and remove "www."
-    // }
-
-    // console.log("Valid URL (without 'www.'):", url);
     return true;
   }
 
