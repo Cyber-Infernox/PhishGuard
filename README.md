@@ -38,7 +38,10 @@ PhishGuard leverages a powerful tech stack to deliver its features:
 
 ## Screenshots
 
+### React App Home Page
 ![Home Page](Screenshots/Home.png)
+
+### Extension
 ![Google Chrome Browser Extension](Screenshots/Extension.png)
 
 ## Contributing
